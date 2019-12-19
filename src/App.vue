@@ -42,7 +42,13 @@ ul {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: flex;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    background: #f6f3ff;
+
+    @media screen and (max-width: 650px) {
+        display: block;
+    }
 }
 
 .main-view {
@@ -52,6 +58,9 @@ ul {
     width: 100%;
     height: 100%;
     background: #f6f3ff;
+    @media screen and (max-width: 650px) {
+        padding: 10px 40px 40px 40px;
+    }
 }
 
 a {
@@ -65,7 +74,7 @@ a {
     }
 
     &.link:hover {
-        box-shadow: inset 0 -13px 0 -1px #cd9cf2;
+        box-shadow: inset 0 -20px 0 -1px #cd9cf2;
     }
     &.link:hover:active {
         color: magenta;
@@ -77,6 +86,10 @@ h1 {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 40px;
+}
+
+.cls-1 {
+    fill: red;
 }
 
 /*Vue classes */
